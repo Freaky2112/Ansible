@@ -2,15 +2,17 @@
 
 - hosts: all
   become: true
-  vars:
-    ansible_python_interpreter: auto
-  tasks:
-
+  pre_tasks:
   - name: Update Repository
-    apt:
+    package:
       update_cache: yes
 
-  - name: install Package on Fresh Install
-    apt:
-      name: git
-      state: latest
+  - name: Upgrade Distro (Debian - Ubuntu)
+    package:
+      upgrade: dist 
+    when: ansible_distribution in ["Debian", "Ubuntu"]
+
+  -name: Upgrade Distro (Centos - RedHat)
+   package:
+     update_only: yes
+   when: ansible_distribution ["Centos", "RedHat", "Fedora"]

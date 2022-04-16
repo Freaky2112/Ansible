@@ -1,0 +1,17 @@
+---
+
+- hosts: Mail
+  become: true
+  tasks:
+
+  - name: install Package on Fresh Install
+    package:
+      name: 
+        - git
+        - curl
+        - wget
+        - tmux
+        - htop
+      state: latest
+      update_cache: yes
+    when: ansible_distribution in ["Debian", "Ubuntu"]
