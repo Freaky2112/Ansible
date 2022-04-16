@@ -1,0 +1,9 @@
+---
+- name: Update web servers
+  hosts: all
+  become: true
+  tasks:
+
+  - name: Install Package on Fresh Installation
+    apt:
+      name: git

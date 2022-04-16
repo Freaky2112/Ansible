@@ -1,0 +1,1000 @@
+ 1032  cat pi_1
+ 1033  cat test
+ 1034  scp  jump@192.168.20:/ssh_keys/ test
+ 1035  scp jump@192.168.20:/ssh_keys/ test
+ 1036  ls
+ 1037  scp -i pi_1 jump@192.168.20:/ssh_keys/ test
+ 1038  scp -v -i pi_1 jump@192.168.20:/ssh_keys/ test
+ 1039  scp -v -i pi_1 jump@192.168.20:/ssh_keys/ ~/.ssh/test
+ 1040  cd ..
+ 1041  ls
+ 1042  cat .bashrc
+ 1043  cd .ssh
+ 1044  ls
+ 1045  mv test.pub github.pub
+ 1046  ls
+ 1047  mv test github
+ 1048  ls
+ 1049  mv github ansible_client_ed25519
+ 1050  mv github.pub ansible_client_ed25519.pub
+ 1051  ls
+ 1052  cd ..
+ 1053  cat .bashrc
+ 1054  cd .ssh
+ 1055  ls
+ 1056  cd ..
+ 1057  ls
+ 1058  cd Ansible/
+ 1059  ls
+ 1060  mv test.pub ansible_client_ed25519.pub
+ 1061  ls
+ 1062  git status 
+ 1063  git commit -a
+ 1064  git status 
+ 1065  git add ansible_client_ed25519.pub 
+ 1066  git status 
+ 1067  git commit -a
+ 1068  git status 
+ 1069  git push origin main
+ 1070  ls
+ 1071  cd ..
+ 1072  ls
+ 1073  cd  Ansible/
+ 1074  ls
+ 1075  cd ..
+ 1076  ls
+ 1077  cd .ssh
+ 1078  ls
+ 1079  cat authorized_keys \
+ 1080  cat authorized_keys 
+ 1081  ssh-import-id 
+ 1082  ssh freaky@192.168.22.63
+ 1083  clear
+ 1084  ls
+ 1085  cd ..
+ 1086  ls
+ 1087  cd Ansible/ls
+ 1088  cd Ansible
+ 1089  ls
+ 1090  cd ..
+ 1091  ls
+ 1092  cd Aliases/
+ 1093  ls
+ 1094  mv upgardescript.sh upgradescript.sh
+ 1095  ls
+ 1096  nano .bashrc 
+ 1097  upgrade
+ 1098  cd ..
+ 1099  nano .bashrc
+ 1100  bash
+ 1101  exit
+ 1102  ls
+ 1103  cd Aliases/
+ 1104  clear
+ 1105  ls
+ 1106  ls -a
+ 1107  cat .bashrc
+ 1108  ls
+ 1109  cat test
+ 1110  rm test 
+ 1111  ls
+ 1112  rm output 
+ 1113  rm txt.txt 
+ 1114  ls
+ 1115  cat aliases.sh 
+ 1116  ls
+ 1117  cat aliases.sh 
+ 1118  ls
+ 1119  mkdir noneed
+ 1120  mv aliases.* noneed/
+ 1121  ls noneed/
+ 1122  ls
+ 1123  la
+ 1124  mv dotfiles/ noneed/
+ 1125  sudo mv dotfiles/ noneed/
+ 1126  ls
+ 1127  git status 
+ 1128  git add 
+ 1129  git add *
+ 1130  git status 
+ 1131  git commit
+ 1132  git status 
+ 1133  git push origin master 
+ 1134  git rm aliases.*
+ 1135  git rm dotfiles 
+ 1136  git rm -r dotfiles 
+ 1137  git status
+ 1138  git add .*
+ 1139  git add 
+ 1140  git add .'?
+ 1141  git add .b*
+ 1142  git add .s*
+ 1143  git add .t*
+ 1144  git add .v*
+ 1145  git status
+ 1146  git commit
+ 1147  git push origin master 
+ 1148  git rm bashrc_alias.txt 
+ 1149  git status 
+ 1150  ls
+ 1151  la
+ 1152  git commit
+ 1153  git push origin master 
+ 1154  git commit
+ 1155  git push origin master 
+ 1156  ls
+ 1157  la
+ 1158  ls
+ 1159  clear
+ 1160  ls
+ 1161  cd .git
+ 1162  ls
+ 1163  cat config
+ 1164  cat COMMIT_EDITMSG 
+ 1165  ls
+ 1166  cd branches/
+ 1167  ls
+ 1168  la
+ 1169  cd ..
+ 1170  la
+ 1171  cat index 
+ 1172  ls\
+ 1173  ls
+ 1174  cd ..
+ 1175  ls
+ 1176  cat README.md 
+ 1177  nano README.md 
+ 1178  git status 
+ 1179  nano command.list
+ 1180  ls
+ 1181  la
+ 1182  cat .bashrc
+ 1183  git status 
+ 1184  git add command.list 
+ 1185  git commit 
+ 1186  git push origin master 
+ 1187  git status 
+ 1188  git add README.md 
+ 1189  git push origin master 
+ 1190  git commit 
+ 1191  git push origin master 
+ 1192  ls
+ 1193  cd ..
+ 1194  ls
+ 1195  cd Ansible/
+ 1196  ls
+ 1197  cd ..
+ 1198  cd .ssh
+ 1199  ls
+ 1200  cd ..
+ 1201  ls
+ 1202  cat .bashrc
+ 1203  clear
+ 1204  cd .ssh
+ 1205  ssh-copy-id test pi@192.168.7.25
+ 1206  ssh-copy-id -i test pi@192.168.7.25
+ 1207  ssh -i pi@192.168.7.25
+ 1208  ssh -i test pi@192.168.7.25
+ 1209  clear
+ 1210  cd ~
+ 1211  clear
+ 1212  upgrade
+ 1213  bash
+ 1214  exit
+ 1215  upgrade
+ 1216  ls Aliases/
+ 1217  nano .bashrc
+ 1218  ~/.bashrc
+ 1219  sudo ~/.bashrc
+ 1220  sudo /.bashrc
+ 1221  sudo .bashrc
+ 1222  sudo bashrc
+ 1223  . ~/.bashrc
+ 1224  upgrade
+ 1225  nano .bashrc
+ 1226  . ~/.bashrc
+ 1227  upgrade
+ 1228  git status 
+ 1229  cd Aliases/
+ 1230  git status 
+ 1231  git add upgardescript.sh 
+ 1232  ls
+ 1233  nano aliases.txt 
+ 1234  git status 
+ 1235  git add aliases.txt 
+ 1236  git commit 
+ 1237  ssha
+ 1238  git push origin master 
+ 1239  ls
+ 1240  nano aliases.sh 
+ 1241  nano install.sh
+ 1242  nano bashrc_alias.txt
+ 1243  ls
+ 1244  cat alias.txt
+ 1245  cat aliases.txt
+ 1246  cat aliases.txt >> bashrc_alias.txt
+ 1247  nano bashrc_alias.txt
+ 1248  ls
+ 1249  chmod +x install.sh 
+ 1250  ./install.sh 
+ 1251  ls
+ 1252  nano install.sh 
+ 1253  ./install.sh 
+ 1254  nano install.sh 
+ 1255  ./install.sh 
+ 1256  if grep -Fxq "$FILENAME" my_list.txt; then
+ 1257  else
+ 1258  fi
+ 1259  nano install.sh 
+ 1260  y
+ 1261  ./install.sh 
+ 1262  cd ~
+ 1263  ls -a
+ 1264  nano .bashrc
+ 1265  nano install.sh 
+ 1266  cd Aliases/
+ 1267  nano install.sh 
+ 1268  ./install.sh 
+ 1269  nano install.sh 
+ 1270  ./install.sh 
+ 1271  if grep "~/.bashrc" bashrc_alias.txt then found  else not foud q; :q; E; x:; C
+ 1272  if grep "~/.bashrc" bashrc_alias.txt then found  else not foud fi
+ 1273  grep "~/.bashrc" bashrc_alias.txt then found  else not foud
+ 1274  grep "~/.bashrc" bashrc_alias.txt
+ 1275  grep "~/.bashrc" bashrc_alias.txt >> test
+ 1276  ls
+ 1277  cat test
+ 1278  nano install.sh 
+ 1279  ./install.sh 
+ 1280  nano install.sh 
+ 1281  ./install.sh 
+ 1282  nano install.sh 
+ 1283  ./install.sh 
+ 1284  nano install.sh 
+ 1285  ./install.sh 
+ 1286  nano install.sh 
+ 1287  ./install.sh 
+ 1288  ls
+ 1289  cat test
+ 1290  nano test
+ 1291  nano install.sh 
+ 1292  ./install.sh 
+ 1293  nano install.sh 
+ 1294  ./install.sh 
+ 1295  ls
+ 1296  nano install.sh 
+ 1297  ./install.sh 
+ 1298  clear
+ 1299  ls
+ 1300  cat upgardescript.sh 
+ 1301  ls
+ 1302  nano README.md 
+ 1303  git status 
+ 1304  la
+ 1305  ls
+ 1306  cd ..
+ 1307  ls
+ 1308  cd .ssh
+ 1309  ls
+ 1310  cd ..
+ 1311  cat .bashrc
+ 1312  nano check
+ 1313  nano file.txt
+ 1314  ls
+ 1315  nano check 
+ 1316  chmod +x check
+ 1317  ./check
+ 1318  nano check
+ 1319  ./check
+ 1320  nano check
+ 1321  ./check
+ 1322  nano check
+ 1323  ./check
+ 1324  nano check
+ 1325  ./check
+ 1326  nano file.txt
+ 1327  ./check
+ 1328  nano file.txt
+ 1329  ./check
+ 1330  nano check 
+ 1331  ls
+ 1332  mkdir testbash
+ 1333  mv check testbash/
+ 1334  mv file.txt testbash/
+ 1335  ls
+ 1336  cd Aliases/
+ 1337  ls
+ 1338  nano install.sh 
+ 1339  ./install.sh 
+ 1340  nano install.sh 
+ 1341  ./install.sh 
+ 1342  ls ~/
+ 1343  ls -a ~/
+ 1344  nano install.sh 
+ 1345  ls -a ~/
+ 1346  nano install.sh 
+ 1347  ./install.sh 
+ 1348  nano install.sh 
+ 1349  ./install.sh 
+ 1350  nano install.sh 
+ 1351  ls
+ 1352  cat aliases.txt 
+ 1353  nano txt.txt
+ 1354  nano install.sh 
+ 1355  ./install.sh 
+ 1356  nano install.sh 
+ 1357  ./install.sh 
+ 1358  /home/freaky
+ 1359  cd /home/freaky
+ 1360  ls
+ 1361  echo $HOME
+ 1362  cd Aliases/
+ 1363  ls
+ 1364  nano install.sh 
+ 1365  ./install.sh 
+ 1366  cat ~/.bashrc
+ 1367  nano txt.txt 
+ 1368  ./install.sh 
+ 1369  cat install.sh 
+ 1370  FILE=$HOME"/.bashrc"
+ 1371  STRING1=$HOME"/Aliases/txt.txt"
+ 1372  grep -qF $STRING1 $FILE; >> output
+ 1373  ls
+ 1374  cat output 
+ 1375  grep  $STRING1 $FILE 
+ 1376  echo $?
+ 1377  grep $STRING1 $FILE 
+ 1378  echo $STRING1 
+ 1379  grep -nqF $STRING1 $FILE * >> output
+ 1380  grep -nqF $STRING1 $FILE >> output
+ 1381  cat output 
+ 1382  cd ..
+ 1383  cd dotfiles/
+ 1384  ls
+ 1385  ls -a
+ 1386  cat .bashrc
+ 1387  wip
+ 1388  ls
+ 1389  ls -a
+ 1390  cat .bash_aliases 
+ 1391  glog
+ 1392  clear
+ 1393  ./install.sh 
+ 1394  ls
+ 1395  cd ..
+ 1396  la
+ 1397  ls
+ 1398  cd Aliases/
+ 1399  ls
+ 1400  la
+ 1401  ./install.sh 
+ 1402  ls
+ 1403  cat txt.txt 
+ 1404  grep "upgradescript.sh" $HOME/.bashrc
+ 1405  fgrep "upgradescript.sh" $HOME/.bashrc
+ 1406  cat $HOME/.bashrc |grep "upgradescript.sh"
+ 1407  grep "upgradescript.sh" txt.txt 
+ 1408  cd ~
+ 1409  ls
+ 1410  ls -a
+ 1411  grep "upgradescript.sh" .bashrc
+ 1412  grep "upgradescript.sh" ~/.bashrc
+ 1413  grep "upgradescript.sh" ~/.bashrc_aliases
+ 1414  grep "upgradescript.sh" .bash_aliases
+ 1415  grep _IR "upgradescript.sh" .bashrc
+ 1416  grep -IR "upgradescript.sh" .bashrc
+ 1417  grep -R "upgradescript.sh" .bashrc
+ 1418  grep -I "upgradescript.sh" .bashrc
+ 1419  cat $HOME/.bashrc |grep "upgradescript.sh"
+ 1420  cat $HOME/.bashrc |grep -IR "upgradescript.sh"
+ 1421  cat ~ |grep -IR "upgradescript.sh"
+ 1422  cat ~ |grep -R "upgradescript.sh"
+ 1423  cat ~ |grep -I "upgradescript.sh"
+ 1424  cat ~/.bashrc |grep -I "upgradescript.sh"
+ 1425  grep -v 
+ 1426  grep -v history
+ 1427  grep -I "upgradescript.sh"
+ 1428  grep -v history
+ 1429  grep "upgradescript.sh" $HOME/.bashrc
+ 1430  grep -v history
+ 1431  grep "upgradescript.sh" $HOME/.bashrc | grep -v history
+ 1432  grep "upgradescript.sh" ~/.bash* | grep -v history
+ 1433  grep ps ~/.bash* | grep -v history
+ 1434  grep -i ps ~/.bash* | grep -v history
+ 1435  grep -i "upgradescript.sh" ~/.bash* | grep -v history
+ 1436  grep -i upgradescript ~/.bash* | grep -v history
+ 1437  grep -i 
+ 1438  grep -i ps ~/.bash* | grep -v history
+ 1439  grep -i upgrade ~/.bash* | grep -v history
+ 1440  grep -i upgradescript ~/.bash* | grep -v history
+ 1441  grep -i upgrade ~/.bash* | grep -v history
+ 1442  ls
+ 1443  cd dot
+ 1444  cd dotfiles/
+ 1445  ls
+ 1446  cat install.sh 
+ 1447  ls
+ 1448  ls -la
+ 1449  cat .bashrc
+ 1450  cat .bash_aliases 
+ 1451  cd ..
+ 1452  ls
+ 1453  cd testbash/
+ 1454  ls
+ 1455  ls check
+ 1456  cat check 
+ 1457  ls
+ 1458  cat file.txt 
+ 1459  ./check 
+ 1460  nano file.txt 
+ 1461  ./check 
+ 1462  nano file.txt 
+ 1463  ./check 
+ 1464  ls
+ 1465  cd ..
+ 1466  ls
+ 1467  cd Aliases/
+ 1468  ls
+ 1469  nano aliases.txt 
+ 1470  port
+ 1471  cd ..
+ 1472  ls
+ 1473  ls -la
+ 1474  ls -a
+ 1475  mv .bash_aliases ~/back/
+ 1476  ls
+ 1477  mkdir back
+ 1478  mv .bash_aliases ~/back/
+ 1479  mv .bash_exports ~/back/
+ 1480  mv .bash_profile ~/back/
+ 1481  mv .bash_wrappers ~/back/
+ 1482  mv .bashrc ~/back/
+ 1483  mv .screenrc ~/back/
+ 1484  mv .tmux.conf ~/back/
+ 1485  mv .vimrc ~/back/
+ 1486  ls
+ 1487  cd back/
+ 1488  ls
+ 1489  la
+ 1490  nano .bashrc
+ 1491  cd ~
+ 1492  ls
+ 1493  diff
+ 1494  diff -h
+ 1495  diff -help
+ 1496  ls -a
+ 1497  diff .bashrc bashrc.dtbak
+ 1498  diff .bashrc .bashrc.dtbak
+ 1499  cd back
+ 1500  ls
+ 1501  ls -a
+ 1502  cp * ~
+ 1503  cp .* ~
+ 1504  cp .* /~
+ 1505  cp .* /home/freaky
+ 1506  cp .* /home/freaky/
+ 1507  cp -h
+ 1508  cp -help
+ 1509  cp --help
+ 1510  ls- a
+ 1511  ls -a
+ 1512  cp -r .* ~/
+ 1513  cp -r * ~/
+ 1514  cp -r .b* ~/
+ 1515  cp -r .t* ~/
+ 1516  cp -r .s* ~/
+ 1517  cp -r .v* ~/
+ 1518  cd ~
+ 1519  ls
+ 1520  ls -a
+ 1521  diff .bashrc .bashrc.dtbak
+ 1522  diff --help
+ 1523  diff -v .bashrc .bashrc.dtbak
+ 1524  diff -q .bashrc .bashrc.dtbak
+ 1525  diff -qr .bashrc .bashrc.dtbak
+ 1526  diff -qr .bashrc .bashrc.dtbak >> result
+ 1527  ls
+ 1528  cat result 
+ 1529  diff -q .bashrc .bashrc.dtbak >> result
+ 1530  diff .bashrc .bashrc.dtbak
+ 1531  cat result 
+ 1532  htop
+ 1533  mc
+ 1534  tmuc
+ 1535  tmux
+ 1536  exit
+ 1537  upgrade
+ 1538  history
+ 1539  ! 21
+ 1540  history
+ 1541  ! 1533
+ 1542  history ! 1533
+ 1543  history ls -a
+ 1544  upgrade
+ 1545  clear
+ 1546  cowsay Sudo
+ 1547  git clone https://github.com/CISOfy/lynis.git
+ 1548  cd lynis/
+ 1549  ls
+ 1550  ./lynis
+ 1551  ./lynis audit
+ 1552  ./lynis audit system
+ 1553  sudo ./lynis audit system
+ 1554  cd .. 
+ 1555  sudo chown -R 0:0 lynis
+ 1556  cd lynis/
+ 1557  sudo ./lynis 
+ 1558  sudo ./lynis audit system
+ 1559  sudo reboot
+ 1560  cd lynis/
+ 1561  ls
+ 1562  cat default.prf 
+ 1563  sudo ./lynis audit
+ 1564  exit
+ 1565  upgrade
+ 1566  exit
+ 1567  telnet
+ 1568  telnet pbx.networkeclipse.com 80
+ 1569  telnet pbx.networkeclipse.com 443
+ 1570  telnet pbx.networkeclipse.com 1193
+ 1571  ssh pbx.networkeclipse.com 80
+ 1572  ssh pbx.networkeclipse.com:80
+ 1573  ssh pbx.networkeclipse.com 
+ 1574  ssh -p 80 pbx.networkeclipse.com 
+ 1575  dig pbx.networkeclipse.com
+ 1576  exit
+ 1577  cd /etc/ssh
+ 1578  cat sshd_config
+ 1579  exit
+ 1580  upgrade
+ 1581  exit
+ 1582  ssha
+ 1583  history
+ 1584  cd Aliases/
+ 1585  git push origin master 
+ 1586  git pull origin master 
+ 1587  ls .bashrc
+ 1588  nano .bashrc
+ 1589  git push origin master 
+ 1590  git add .bashrc 
+ 1591  git commit
+ 1592  git push origin master 
+ 1593  ls -a
+ 1594  exit
+ 1595  cd Ali
+ 1596  cd Aliases/
+ 1597  nano .bashrc
+ 1598  ssha
+ 1599  cd ..
+ 1600  ssha
+ 1601  ls /.ssh
+ 1602  ls
+ 1603  ls .ssh
+ 1604  history
+ 1605  cd \Ali
+ 1606  cd Aliases/
+ 1607  ls
+ 1608  git add .bashrc 
+ 1609  git push 
+ 1610  git commit
+ 1611  git push
+ 1612  git push origin master 
+ 1613  ssha
+ 1614  cd ~
+ 1615  nano .bashrc
+ 1616  cd .ssh
+ 1617  ls
+ 1618  cd ..
+ 1619  ls
+ 1620  nano .bashrc
+ 1621  ssha
+ 1622  bash
+ 1623  exit
+ 1624  nano .bashrc
+ 1625  bash
+ 1626  exit
+ 1627  nano .bashrc
+ 1628  bash
+ 1629  exit
+ 1630  cd Aliases/
+ 1631  ls
+ 1632  nano .bashrc
+ 1633  c d~
+ 1634  cd ~
+ 1635  nano .bashrc
+ 1636  bash
+ 1637  exit
+ 1638  nano .bashrc
+ 1639  bash
+ 1640  exit
+ 1641  nano .bashrc
+ 1642  bash
+ 1643  exit
+ 1644  nano .bashrc
+ 1645  bash
+ 1646  exit
+ 1647  nano .bashrc
+ 1648  bash
+ 1649  exit
+ 1650  nano .bashrc
+ 1651  bash
+ 1652  exit
+ 1653  dig pbx.networkeclipse.com
+ 1654  nano .bashrc
+ 1655  bash
+ 1656  exit
+ 1657  nano .bashrc
+ 1658  cd Aliases/
+ 1659  ls
+ 1660  ls -a
+ 1661  nano .bashrc
+ 1662  cd ~
+ 1663  ls
+ 1664  nano .bashrc
+ 1665  bash
+ 1666  exit
+ 1667  nano .bashrc
+ 1668  bash
+ 1669  exit
+ 1670  nano .bashrc
+ 1671  bash
+ 1672  exit
+ 1673  nano .bashrc
+ 1674  bash
+ 1675  exit
+ 1676  nano .bashrc
+ 1677  bash
+ 1678  exit
+ 1679  nano .bashrc
+ 1680  bash
+ 1681  exit
+ 1682  nano .bashrc
+ 1683  bash
+ 1684  exit
+ 1685  nano .bashrc
+ 1686  bash
+ 1687  exit
+ 1688  nano .bashrc
+ 1689  bash
+ 1690  exit
+ 1691  nano .bashrc
+ 1692  bash
+ 1693  exit
+ 1694  sudo nano .bashrc
+ 1695  bash
+ 1696  exit
+ 1697  sudo nano ./bashrc
+ 1698  sudo nano .bashrc
+ 1699  su
+ 1700  sudo nano .bashrc
+ 1701  bash
+ 1702  exit
+ 1703  ## 👽  ☠️  👽 ❄️ ⚡ 🎱
+ 1704  ls
+ 1705  cd dotfiles/
+ 1706  ls
+ 1707  cd ..
+ 1708  cd Aliases/
+ 1709  ls
+ 1710  ls -a
+ 1711  nano .bashrc 
+ 1712  sudo nano .bashrc
+ 1713  cd ~
+ 1714  sudo nano .bashrc
+ 1715  .bashrc
+ 1716  .bash
+ 1717  bash
+ 1718  exit
+ 1719  sudo reboot
+ 1720  cd Aliases/
+ 1721  cat .bashrc
+ 1722  exit
+ 1723  cd ..
+ 1724  exit
+ 1725  dfgdgdg
+ 1726  bash
+ 1727  exit
+ 1728  cd Aliases/
+ 1729  ls
+ 1730  nano install.sh
+ 1731  ls
+ 1732  cat install
+ 1733  cat command.list 
+ 1734  ls
+ 1735  cat regenerate_ssh_host_keys.service 
+ 1736  cat ssh_regenerate.txt 
+ 1737  cat ssh_regenerate.sh
+ 1738  nano ssh_regenerate.sh 
+ 1739  ls
+ 1740  print command.list 
+ 1741  echo command.list 
+ 1742  print echo command.list 
+ 1743  echo < command.list 
+ 1744  echo "$(cat command.list)"
+ 1745  nano install.sh 
+ 1746  nano install2.sh 
+ 1747  ./install2.sh
+ 1748  sudo ./install2.sh
+ 1749  chmod +X install2.sh 
+ 1750  ls
+ 1751  sudo chmod +X install2.sh 
+ 1752  ls
+ 1753  sudo chmod +x install2.sh 
+ 1754  ls
+ 1755  sudo ./install2.sh
+ 1756  nano install2.sh 
+ 1757  sudo ./install2.sh
+ 1758  ls
+ 1759  nano install2.sh 
+ 1760  sudo ./install2.sh
+ 1761  nano install2.sh 
+ 1762  nano install.sh 
+ 1763  ls
+ 1764  nano command.list 
+ 1765  nano .bashrc
+ 1766  bash
+ 1767  exit
+ 1768  cd /var/log
+ 1769  exit
+ 1770  cd /var/logs
+ 1771  cd /var/log
+ 1772  exit
+ 1773  exit\
+ 1774  exit
+ 1775  cd /var/log
+ 1776  dsfdsf
+ 1777  cd ~
+ 1778  nano .bashrc
+ 1779  cd Aliases/
+ 1780  ls
+ 1781  cd ..
+ 1782  nano .bashrc
+ 1783  cd Aliases/
+ 1784  ls
+ 1785  nano .bashrc 
+ 1786  cd ..
+ 1787  nano .bashrc 
+ 1788  cd Aliases/
+ 1789  nano .bashrc 
+ 1790  cd ..
+ 1791  nano .bashrc 
+ 1792  cd Aliases/
+ 1793  nano .bashrc 
+ 1794  ls
+ 1795  cat command.list 
+ 1796  ssha
+ 1797  git add A
+ 1798  git add -A
+ 1799  git commit
+ 1800  git push origin master 
+ 1801  git pull origin master 
+ 1802  ls
+ 1803  ls -a
+ 1804  git push origin master 
+ 1805  exit
+ 1806  nano .bashrc
+ 1807  bash
+ 1808  exit
+ 1809  cd /var/log
+ 1810  nano .bashrc
+ 1811  cd ~
+ 1812  nano .bashrc
+ 1813  bash
+ 1814  exit
+ 1815  nano .bashrc
+ 1816  bash
+ 1817  exit
+ 1818  sdfdsf
+ 1819  nano .bashrc
+ 1820  bash
+ 1821  exit
+ 1822  nano .bashrc
+ 1823  bash
+ 1824  exit
+ 1825  dsfsdfdsf
+ 1826  nano .bashrc
+ 1827  bash
+ 1828  exit
+ 1829  nano .bashrc
+ 1830  bash
+ 1831  nano .bashrc
+ 1832  bash
+ 1833  nano .bashrc
+ 1834  bash
+ 1835  nano .bashrc
+ 1836  bash
+ 1837  nano .bashrc
+ 1838  bash
+ 1839  nano .bashrc
+ 1840  bash
+ 1841  exit
+ 1842  cd Al
+ 1843  cd Aliases/
+ 1844  ls
+ 1845  ls -a
+ 1846  bash-color.txt
+ 1847  nano bash-color.txt
+ 1848  ls
+ 1849  cd noneed/
+ 1850  ls
+ 1851  ls -a
+ 1852  nano bashrc
+ 1853  exit
+ 1854  ls
+ 1855  cd back
+ 1856  ks
+ 1857  ls
+ 1858  cd ls
+ 1859  ls -a
+ 1860  cd ..
+ 1861  ls
+ 1862  cd lynis/
+ 1863  ls
+ 1864  cd ..
+ 1865  ls
+ 1866  cd testbash/
+ 1867  ls
+ 1868  cd check
+ 1869  cat check 
+ 1870  ls
+ 1871  cdl
+ 1872  cd 
+ 1873  ls
+ 1874  cat<<'EOF'
+ 1875             _..._
+ 1876           .'     '.
+ 1877          /  _   _  \
+ 1878          | (o)_(o) |
+ 1879           \(     ) /
+ 1880           //'._.'\ \
+ 1881          //   .   \ \
+ 1882         ||   .     \ \
+ 1883         |\   :     / |
+ 1884         \ `) '   (`  /_
+ 1885       _)``".____,.'"` (_
+ 1886       )     )'--'(     (
+ 1887        '---`      `---`
+ 1888  EOF
+ 1889  exit
+ 1890  ls
+ 1891  cd /etc/motd
+ 1892  cd /etc/
+ 1893  ls
+ 1894  ls m*
+ 1895  ls *m*
+ 1896  ls *motd*
+ 1897  cd default/
+ 1898  ls
+ 1899  cat motd-news 
+ 1900  ls
+ 1901  nano motd-news 
+ 1902  cd ..
+ 1903  ls
+ 1904  exit
+ 1905  ls
+ 1906  cd /etc/
+ 1907  ls
+ 1908  ls motd
+ 1909  nano motd
+ 1910  sudo nano motd
+ 1911  exit
+ 1912  cd /etc/
+ 1913  sudo nano motd
+ 1914  exit
+ 1915  cd Aliases/
+ 1916  nano .bashrc
+ 1917  cd ..
+ 1918  nano .bashrc
+ 1919  source .bashrc
+ 1920  ping 192.168.22.25
+ 1921  ls
+ 1922  cd Aliases/
+ 1923  ls
+ 1924  cd noneed/
+ 1925  ls
+ 1926  cd ..
+ 1927  ls
+ 1928  cat ssh_regenerate.txt 
+ 1929  cat ssh_regenerate.sh 
+ 1930  nano README.md 
+ 1931  upgrade
+ 1932  cd Aliases/
+ 1933  ls
+ 1934  cat bash-color.txt 
+ 1935  nano bash-color.txt 
+ 1936  cat bash-color.txt 
+ 1937  ls
+ 1938  nano .bashrc 
+ 1939  exit
+ 1940  reboot
+ 1941  nano .bashrc
+ 1942  source .bashrc
+ 1943  clear
+ 1944  ls -a
+ 1945  nano .bashrc
+ 1946  source .bashrc
+ 1947  nano .bashrc
+ 1948  ls -a
+ 1949  cd Aliases/
+ 1950  ls
+ 1951  cat regenerate_ssh_host_keys.service 
+ 1952  clear
+ 1953  cd ..
+ 1954  ls
+ 1955  nanon .bashrc
+ 1956  nano .bashrc
+ 1957  source .bashrc
+ 1958  nano .bashrc
+ 1959  source .bashrc
+ 1960  nano .bashrc
+ 1961  source .bashrc
+ 1962  nano .bashrc
+ 1963  source .bashrc
+ 1964  nano .bashrc
+ 1965  source .bashrc
+ 1966  nano .bashrc
+ 1967  source .bashrc
+ 1968  cd Aliases/
+ 1969  ls
+ 1970  cd ~
+ 1971  nano .bashrc
+ 1972  source .bashrc
+ 1973  nano .bashrc
+ 1974  source .bashrc
+ 1975  time
+ 1976  date
+ 1977  clear
+ 1978  nano .bashrc
+ 1979  cd Aliases/
+ 1980  ls
+ 1981  nano .bashrc
+ 1982  nano ~/.bashrc
+ 1983  nano .bashrc
+ 1984  clear
+ 1985  timedatectl 
+ 1986  ls -l /etc/localtime 
+ 1987  timedatectl list-timezones 
+ 1988  sudo timedatectl America/Montreal
+ 1989  sudo timedatectl 
+ 1990  sudo timedatectl set-timezone America/Montreal
+ 1991  ls
+ 1992  clear
+ 1993  reboot
+ 1994  exit
+ 1995  clear
+ 1996  ssh 192.168.22.20
+ 1997  ls
+ 1998  cat inventory 
+ 1999  mv inventory inventory.bak
+ 2000  nanon inventory
+ 2001  nano inventory
+ 2002  ls
+ 2003  ansible all --key-file ~/.ssh/ansible_client_ed25519 -i inventory -m ping
+ 2004  ansible all --key-file ~/.ssh/ansible_client_ed25519 -i inventory -m ls
+ 2005  ls
+ 2006  nano ansible.cfg 
+ 2007  ansible all --key-file  -m ping
+ 2008  ansible all -m ping
+ 2009  ls
+ 2010  nano ansible.cfg 
+ 2011  ansible all -m ping
+ 2012  ansible all --list-hosts
+ 2013  ansible all gather_facts
+ 2014  ansible all gather_fact
+ 2015  ansible all -m gather_facts
+ 2016  clear
+ 2017  ls\
+ 2018  clear
+ 2019  ls
+ 2020  ansible all -m apt -a update_cache=true
+ 2021  ssha
+ 2022  cat .bashrc
+ 2023  cat ~/.bashrc
+ 2024  source .bashrc
+ 2025  source ~/.bashrc
+ 2026  ssha
+ 2027  ansible all -m apt -a update_cache=true
+ 2028  ansible all -m apt -a update_cache=true --become --ask-become-pass
+ 2029  ansible all -m apt -a name=net-tools --become --ask-become-pass
+ 2030  history 
+ 2031  history >> command.txt
