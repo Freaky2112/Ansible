@@ -4,15 +4,15 @@
   become: true
   pre_tasks:
   - name: Update Repository
+    tags: always
     package:
       update_cache: yes
+    changed_when: false
 
-  - name: Upgrade Distro (Debian - Ubuntu)
-    package:
-      upgrade: dist 
-    when: ansible_distribution in ["Debian", "Ubuntu"]
+  - name: Start and Enable Service
+    tags: enable
+    service:
+      name: ssh
+      state: started
+      enable: yes
 
-  -name: Upgrade Distro (Centos - RedHat)
-   package:
-     update_only: yes
-   when: ansible_distribution ["Centos", "RedHat", "Fedora"]

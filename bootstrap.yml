@@ -1,0 +1,44 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+  - name: Update Repository
+    tags: always
+    package:
+      update_cache: yes
+
+  - name: Upgrade Distro (Debian - Ubuntu)
+    package:
+      upgrade: dist 
+    when: ansible_distribution in ["Debian", "Ubuntu"]
+
+  - name: Upgrade Distro (Centos - RedHat)
+    package:
+      update_only: yes
+    when: ansible_distribution in ["Centos", "RedHat", "Fedora"]
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: create ... user
+    tag: always
+    user:
+      name: ansible
+      groups: root
+
+  - name: add ssh key for User: ...
+    tags: always
+    authorized_key:
+      user: ansible
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBlslg0lTqwWwNgyhRDreBKP6NjSI5ewt7YTDzsa2nTe Ansible"
+
+  - name: add sudoers file for User ansible
+    tags: always
+    copy:
+      src: sudoer_ansible
+      dest: /etc/sudoers.d/ansible
+      owner: root
+      group: root
+      mode: 0440
