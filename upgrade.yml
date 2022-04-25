@@ -11,8 +11,3 @@
     package:
       upgrade: dist 
     when: ansible_distribution in ["Debian", "Ubuntu"]
-
-  -name: Upgrade Distro (Centos - RedHat)
-   package:
-     update_only: yes
-   when: ansible_distribution ["Centos", "RedHat", "Fedora"]
