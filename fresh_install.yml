@@ -1,17 +1,23 @@
 ---
 
-- hosts: Mail
+- hosts: all
   become: true
-  tasks:
-
-  - name: install Package on Fresh Install
+  pre_tasks:
+  - name: Update Repository
+    tags: always
     package:
-      name: 
-        - git
-        - curl
-        - wget
-        - tmux
-        - htop
+      update_cache: yes
+    changed_when: false
+
+- tasks:
+    - name: Install Package on Fresh Install
+      package:
+        - name: 
+            - git
+            - curl
+            - wget
+            - tmux
+            - htop
       state: latest
       update_cache: yes
-    when: ansible_distribution in ["Debian", "Ubuntu"]
+      when: ansible_distribution in ["Debian", "Ubuntu"]

@@ -9,10 +9,9 @@
       update_cache: yes
     changed_when: false
 
-  - name: Start and Enable Service
-    tags: enable
+  - name: start ssh service
+    tags: ssh
     service:
       name: ssh
       state: started
-      enable: yes
-
+      enabled: yes

@@ -22,13 +22,13 @@
   become: true
   tasks:
 
-  - name: create ... user
-    tag: always
+  - name: create user ansible
+    tags: always
     user:
       name: ansible
       groups: root
 
-  - name: add ssh key for User: ...
+  - name: add ssh key for User ansible
     tags: always
     authorized_key:
       user: ansible

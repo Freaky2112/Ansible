@@ -1,0 +1,22 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+  - name: Update Repository
+    tags: always
+    package:
+      update_cache: yes
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: add ssh key for User ansible
+    tags: always
+    authorized_key:
+      user: ansible
+      state: present
+      key: "{{lookup ('file',/~/Ansible/ansible_client_ed25519.pub')}}"
+
+  
