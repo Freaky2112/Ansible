@@ -1,0 +1,8 @@
+---
+
+- hosts: test
+  - name: Ensure PermitRootLogin no set to no
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitRoot'
+    line: PermitRootLogin yes no could be maybe
