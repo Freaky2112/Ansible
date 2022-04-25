@@ -3,15 +3,16 @@
 - hosts: new
   become: true
   tasks:
-
+## hash your password with this command
+## ansible all -i localhost, -m debug -a "msg={{ 'your password' | password_hash('sha512', 'mysecretsalt') }}"
   - name: create user xxx
     tags: always
     user:
       name: xxx
-      password: 1234
+      password: $6$mysecretsalt$6bIjBq56BukybsSm4pvH7G5/1EGRUOqq.vSm.BKYBXjfe/NP6XJl.DkJirmUW7cZeRu5QaYveXuinpAM/D3ME/
       groups: xxx
 
-#  - name: add sudoers file for User 
+#  - name: add sudoers file for User
 #    tags: always
 #    copy:
 #      src: sudoer_ansible
