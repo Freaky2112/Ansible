@@ -1,0 +1,30 @@
+---
+
+- hosts: new
+  become: true
+  tasks:
+
+  - name: create user xxx
+    tags: always
+    user:
+      name: xxx
+      groups: xxx
+
+#  - name: add sudoers file for User 
+#    tags: always
+#    copy:
+#      src: sudoer_ansible
+#      dest: /etc/sudoers.d/ansible
+#      owner: root
+#      group: root
+#      mode: 0440
+
+## Uncomment if you whant to add user to sudoer file
+  - name: Add user "xxx" to sudo
+    lineinfile:
+      path: /etc/sudoers.d/xxx
+      line: 'xxx ALL=(ALL) NOPASSWD: ALL'
+      state: present
+      mode: 0440
+      create: yes
+      validate: 'visudo -cf %s'
