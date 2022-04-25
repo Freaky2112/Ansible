@@ -8,6 +8,7 @@
     tags: always
     user:
       name: xxx
+      password: 1234
       groups: xxx
 
 #  - name: add sudoers file for User 
@@ -23,7 +24,7 @@
   - name: Add user "xxx" to sudo
     lineinfile:
       path: /etc/sudoers.d/xxx
-      line: 'xxx ALL=(ALL) NOPASSWD: ALL'
+      line: 'xxx ALL=(ALL:ALL) ALL'
       state: present
       mode: 0440
       create: yes
