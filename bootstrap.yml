@@ -1,5 +1,5 @@
 ---
-
+## Update Repository and do all Upgrade needed with standard user !!! 
 - hosts: new
   remote_user: freaky
   become: true
@@ -19,6 +19,7 @@
       update_only: yes
     when: ansible_distribution in ["Centos", "RedHat", "Fedora"]
 
+## create User ansible adding it to sudoer , adding ansible ssh public key to machine 
 - hosts: new
   become: true
   tasks:
@@ -44,3 +45,28 @@
       owner: root
       group: root
       mode: 0440
+
+## Modify ssh config file to Set root login , password authentication and empty password to no  Set public key authentication to yes
+ - name: Ensure PermitRootLogin no set to no
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^PermitRoot'
+      line: PermitRootLogin no
+
+  - name: Ensure PubkeyAuthentication set to yes
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^PubkeyAuth'
+      line: PubkeyAuthentication yes
+
+  - name: Ensure PasswordAuthentication set to no
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^PasswordAuth'
+      line: PasswordAuthentication no
+
+  - name: Ensure PermitEmptyPasswords set to no
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^PermitEmpty'
+      line: PermitEmptyPasswords no
