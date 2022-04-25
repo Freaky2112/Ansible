@@ -1,6 +1,7 @@
 ---
 
-- hosts: all
+- hosts: new
+  remote_user: freaky
   become: true
   pre_tasks:
   - name: Update Repository
@@ -18,7 +19,7 @@
       update_only: yes
     when: ansible_distribution in ["Centos", "RedHat", "Fedora"]
 
-- hosts: all
+- hosts: new
   become: true
   tasks:
 
@@ -32,7 +33,8 @@
     tags: always
     authorized_key:
       user: ansible
-      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBlslg0lTqwWwNgyhRDreBKP6NjSI5ewt7YTDzsa2nTe Ansible"
+      state: present
+      key: "{{lookup ('file',/~/Ansible/ansible_client_ed25519.pub')}}"
 
   - name: add sudoers file for User ansible
     tags: always

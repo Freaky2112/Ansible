@@ -16,3 +16,6 @@
 
 [Worlstation]
 192.168.22.25 
+
+# all new install must pass here
+[new]
