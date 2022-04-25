@@ -35,7 +35,7 @@
     authorized_key:
       user: ansible
       state: present
-      key: "{{lookup ('file',/~/Ansible/ansible_client_ed25519.pub')}}"
+      key: "{{lookup ('file','~/Ansible/ansible_client_ed25519.pub')}}"
 
   - name: add sudoers file for User ansible
     tags: always
@@ -46,8 +46,18 @@
       group: root
       mode: 0440
 
-## Modify ssh config file to Set root login , password authentication and empty password to no  Set public key authentication to yes
- - name: Ensure PermitRootLogin no set to no
+## Modify ssh config file to Set root login to no
+## password authentication and empty password to no
+## Set public key authentication to yes
+- hosts: Test
+  become: true
+  pre_tasks:
+  - name: Update Repository
+    tags: always
+    package:
+      update_cache: yes
+
+  - name: Ensure PermitRootLogin no set to no
     lineinfile:
       path: /etc/ssh/sshd_config
       regexp: '^PermitRoot'
