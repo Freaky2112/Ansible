@@ -1,7 +1,9 @@
 # Ansible
-Let's try this for Fun...
 
-Create Inventory
+Inventory file with groups
 
-PlayBook.yml is the test file...
+bootstrap will create user add it to sudoer and copy sshkey 
 
+to do ...
+
+mod sshd_config file to lock password auth and allow key auth

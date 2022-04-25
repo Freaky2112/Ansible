@@ -1,0 +1,23 @@
+- name: Ensure PubkeyAuthentication set to yes
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PubkeyAuth'
+    line: PubkeyAuthentication yes
+
+- name: Ensure PasswordAuthentication set to no
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PasswordAuth'
+    line: PasswordAuthentication no
+
+- name: Ensure PermitRootLogin no set to no
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitRoot'
+    line: PermitRootLogin no
+
+- name: Ensure PermitEmptyPasswords set to no
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PermitEmpty'
+    line: PermitEmptyPasswords no
