@@ -31,3 +31,98 @@
       path: /etc/ssh/sshd_config
       regexp: '^PermitEmpty'
       line: PermitEmptyPasswords no
+
+
+## SSH Key test
+
+---
+- hosts: cluster
+  tasks:
+          # create users for us
+          # note user vivek added to sudo group 
+          # on many system you may need to use wheel 
+          # user in sudo or wheel group can sudo
+          - user:
+                  name: vivek
+                  comment: "Vivek Gite"
+                  shell: /bin/bash
+                  groups: sudo
+                  append: yes
+                  generate_ssh_key: yes
+                  ## run command 'mkpasswd --method=sha-512' to create your own encrypted password ##
+                  password: $6$gF1EHgeUSSwDT3$xgw22QBdZfNe3OUjJkwXZOlEsL645TpacwiYwTwlUyah03.Zh1aUTTfh7iC7Uu5WfmHBkv5fxdbJ2OkzMAPkm/
+                  ssh_key_type: ed25519
+          # upload ssh key                
+          - authorized_key:
+                  user: vivek
+                  state: present
+                  manage_dir: yes
+                  key: "{{ lookup('file', '/home/vivek/.ssh/id_ed25519.pub') }}"
+          # configure ssh server
+          - template:
+                  src: ssh-setup.j2
+                  dest: /etc/ssh/sshd_config
+                  owner: root
+                  mode: '0600'
+                  validate: /usr/sbin/sshd -t -f %s
+                  backup: yes
+          # restart sshd
+          - service:
+                  name: sshd
+                  state: restarted
+
+## ssh-setup.j2 file.....
+Port 22
+Protocol 2
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_dsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+UsePrivilegeSeparation sandbox
+KeyRegenerationInterval 3600
+ServerKeyBits 1024
+SyslogFacility AUTH
+LogLevel INFO
+LoginGraceTime 120
+PermitRootLogin {{ sshd_permitroot_login }}
+StrictModes yes
+RSAAuthentication yes
+PubkeyAuthentication yes
+LogLevel VERBOSE
+IgnoreRhosts yes
+RhostsRSAAuthentication no
+HostbasedAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+X11Forwarding yes
+X11DisplayOffset 10
+PrintMotd no
+PrintLastLog yes
+TCPKeepAlive yes
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
+UsePAM {{ sshd_use_pam }}
+PasswordAuthentication {{ sshd_password_authentication }}
+ChallengeResponseAuthentication {{ sshd_challenge_response_authentication }}
+{% for nip in ansible_all_ipv4_addresses  %}
+ListenAddress {{ nip }}
+{% endfor %}
+
+## inventory.hosts ....
+[all:vars]
+ansible_user=root
+ansible_port=22
+ 
+[cluster:vars]
+sshd_use_pam=no
+sshd_password_authentication=no
+sshd_challenge_response_authentication=no
+sshd_permitroot_login=no
+ 
+[cluster]
+server1.cyberciti.biz
+server2.cyberciti.biz
+server3.cyberciti.biz
+
+## Commands ... 
+ansible-playbook -i inventory.hosts ssh-setup.yml
