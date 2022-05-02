@@ -1,7 +1,7 @@
 ---
 
-- host: Test
-  - name: Example clone of a single branch
+- hosts: Test
+  -name: 
     ansible.builtin.git:
       repo: https://github.com/Freaky2112/Aliases.git
       dest: /home/freaky/
