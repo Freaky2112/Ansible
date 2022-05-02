@@ -1,9 +1,9 @@
 ---
 
-- hosts: test
-  - name: Backup file before Copying
+- hosts: Test
+  -name: Backup file before Copying
     tags: backup
-    copy:
+      copy:
       src: /home/freaky/.bashrc
       remote_src: yes
       dest: /home/freaky/.bashrc.bak

@@ -17,7 +17,7 @@
     authorized_key:
       user: ansible
       state: present
-      key: "{{lookup ('file',/~/Ansible/ansible_client_ed25519.pub')}}"
+      key: "{{lookup ('file',/~/Ansible/files/ansible_client_ed25519.pub')}}"
 
 ## set up multiple key a once   
 # - name: Set up multiple authorized keys
