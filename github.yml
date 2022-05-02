@@ -1,8 +1,10 @@
 ---
-
-- hosts: Test
-  -name: 
-    ansible.builtin.git:
+## Update Repository and do all Upgrade needed with standard user !!! 
+- hosts: new
+  become: true
+  pre_tasks:
+  - name: Update Repository
+    git:
       repo: https://github.com/Freaky2112/Aliases.git
       dest: /home/freaky/
       single_branch: yes
