@@ -26,12 +26,26 @@
       src: /home/freaky/.bashrc
       remote_src: yes
       dest: /home/freaky/.bashrc.bak
+
+  - name: Clone from github 
+    git:
+      repo: https://github.com/Freaky2112/Aliases.git
+      dest: /home/freaky/Aliases 
   
   - name: Copy bashrc file for color prompt and aliases
     tags: copy
     copy:
-      src: .bashrc
+      src: $HOME/Aliases/.bashrc
       dest: /home/freaky/.bashrc
+      owner: freaky
+      gourp: freaky
+      mode: 0644
+
+  - name: Copy bashrc file for color prompt and aliases
+    tags: copy
+    copy:
+      src: $HOME/Aliases/.tmux.conf
+      dest: /home/freaky/.tmux.conf
       owner: freaky
       gourp: freaky
       mode: 0644

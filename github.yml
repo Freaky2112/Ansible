@@ -1,11 +1,9 @@
 ---
-## Update Repository and do all Upgrade needed with standard user !!! 
+## Fetch Alias Color Bash and Tmux Setting from github !!! 
 - hosts: new
   become: true
   pre_tasks:
-  - name: Update Repository
+  - name: Clone from github 
     git:
       repo: https://github.com/Freaky2112/Aliases.git
-      dest: /home/freaky/
-      single_branch: yes
-      version: master
+      dest: /home/freaky/Aliases
