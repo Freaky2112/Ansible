@@ -4,10 +4,13 @@
   become: true
   pre_tasks:
   - name: Update Repository
-    tags: always
     package:
       update_cache: yes
-    changed_when: false
+
+  - name: Upgrade Distro (Debian - Ubuntu)
+    package:
+      upgrade: dist
+    when: ansible_distribution in ["Debian", "Ubuntu"]
 
   - name: Install Git > Curl > Wget > Net-tools > Htop > Tmux
     apt:
@@ -26,6 +29,9 @@
       src: /home/freaky/.bashrc
       remote_src: yes
       dest: /home/freaky/.bashrc.bak
+      owner: freaky
+      group: freaky
+      mode: 0644
 
   - name: Clone from github 
     git:
@@ -35,7 +41,8 @@
   - name: Copy bashrc file for color prompt and aliases
     tags: copy
     copy:
-      src: $HOME/Aliases/.bashrc
+      remote_src: yes
+      src: /home/freaky/Aliases/.bashrc
       dest: /home/freaky/.bashrc
       owner: freaky
       gourp: freaky
@@ -44,7 +51,8 @@
   - name: Copy bashrc file for color prompt and aliases
     tags: copy
     copy:
-      src: $HOME/Aliases/.tmux.conf
+      src: /home/freaky/Aliases/.tmux.conf
+      remote_src: yes
       dest: /home/freaky/.tmux.conf
       owner: freaky
       gourp: freaky

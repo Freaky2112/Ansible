@@ -19,6 +19,5 @@
 
 # all new install must pass here
 [new]
-192.168.22.32
-192.168.22.33
+192.168.22.25
 

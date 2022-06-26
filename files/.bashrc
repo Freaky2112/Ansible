@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Modded By Ansible 
+
 # Reset
 Color_Off="\[\033[0m\]"       # Text Reset
 
